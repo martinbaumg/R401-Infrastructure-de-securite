@@ -1,0 +1,129 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[francais]{babel}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage{listings}
+\usepackage{geometry}
+\usepackage[colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,menucolor=black,runcolor=black,urlcolor=black]{hyperref}
+
+% \usepackage{mathpazo} --> Police à utiliser lors de rapports plus sérieux
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\rhead{}
+\chead{}
+\rfoot{\thepage}
+\lfoot{Martin Baumgaertner}
+\cfoot{}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+\begin{titlepage}
+	\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} 
+	\center 
+	\textsc{\LARGE iut de colmar}\\[6.5cm] 
+	\textsc{\Large R401 -- Infrastructure de sécurité}\\[0.5cm] 
+	\textsc{\large Année 2022-23}\\[0.5cm]
+	\HRule\\[0.75cm]
+	{\huge\bfseries TP1 - Chiffrement et PKI}\\[0.4cm]
+	\HRule\\[1.5cm]
+	\textsc{\large martin baumgaertner}\\[6.5cm] 
+
+	\vfill\vfill\vfill
+	{\large\today} 
+	\vfill
+\end{titlepage}
+\newpage
+\tableofcontents
+\newpage
+\section{Chiffrement}
+    \subsection{Permutation}
+    \subsubsection{Question 1}
+    Le message déchiffré que j'obtiens est \texttt{MAITRE CORBEAU SUR UN ARBRE PERCHEX}
+    Voici ce que j'ai fait pour obtenir ce message :
+    \begin{enumerate}
+        \item J'ai créé une liste des lettres de l'alphabet, dans l'ordre.
+        \item J'ai créé une deuxième liste, contenant les nombres 1 à 6.
+        \item J'ai apparié les lettres et les chiffres des deux listes, dans l'ordre spécifié dans la clé.
+        \item J'ai utilisé les chiffres pour créer une nouvelle séquence de lettres, en remplaçant chaque lettre du message d'origine par la lettre qui lui correspond dans la nouvelle séquence.
+        \item J'ai supprimé tous les espaces de la chaîne obtenue.
+    \end{enumerate}
+
+    \subsection{Substitution}
+    \subsubsection{Question 2}
+    Voici le message que j'ai trouvé \texttt{UN SECRET}
+
+    \subsection{Diffie-Hellman}
+    \subsubsection{Question 3}
+    J'ai obtenu \texttt{K = 117}
+
+    \subsection{Chiffrement symétrique AES}
+    \subsubsection{Question 5}
+    Voici le résultat que l'on obtient en base64 : \\
+
+    \texttt{U2FsdGVkX1+QhnAugHjdc6bhMEMibXxWGQSE6ZKN56o=,}\\
+
+    L’option “-nosalt” lors d’une commande openssl permet de ne pas rajouter de valeur aléatoire au code avant son hachage. En effet “salt” rajoute une valeur aléatoire pour renforcer le code/mot de passe.
+
+    \newpage
+    \section{PKI}   
+    \subsection{Création du Certificat Racine (ou CA) et de sa clé privée.}
+    \textbf{CA} signigie \textbf{C}ertificate \textbf{A}uthority. C'est une entité qui émet des certificats numériques.\\
+
+    \subsection{Lecture du certificat}
+    Ci-dessous, un tableau avec les différents \textbf{champs}
+    et \textbf{fonctions} du certificat.
+    \begin{center}
+        \begin{tabular}{|c|c|}
+            \hline
+            \textbf{Champ} & \textbf{Fonction} \\
+            \hline
+            Version & Version du certificat \\
+            \hline
+            Serial Number & Numéro de série du certificat \\
+            \hline
+            Signature Algorithm & Algorithme de signature \\
+            \hline
+            Issuer & Entité qui a signé le certificat \\
+            \hline
+            Validity & Période de validité du certificat \\
+            \hline
+            Subject & Entité à qui le certificat est destiné \\
+            \hline
+            Subject Public Key Info & Informations sur la clé publique \\
+            \hline
+            X509v3 extensions & Extensions du certificat \\
+            \hline
+        \end{tabular}
+    \end{center}
+
+    \subsection{Contenu du CSR}
+    \textbf{CSR} signifie \textbf{C}ertificate \textbf{S}igning \textbf{R}equest. C'est une requête de signature de certificat.\\
+    Voici ci-dessous un tableau listant les \textbf{champs} et \textbf{fonctions} du CSR.
+    \begin{center}
+        \begin{tabular}{|c|c|}
+            \hline
+            \textbf{Champ} & \textbf{Fonction} \\
+            \hline
+            Version & Version du CSR \\
+            \hline
+            Subject & Entité à qui le certificat est destiné \\
+            \hline
+            Subject Public Key Info & Informations sur la clé publique \\
+            \hline
+            X509v3 extensions & Extensions du certificat \\
+            \hline
+        \end{tabular}
+    \end{center}
+
+    \subsection{Création de la liste de révocation}
+    \textbf{CRL} signifie \textbf{C}ertificate \textbf{R}evocation \textbf{L}ist. C'est une liste de révocation de certificats.\\
+
+
+
+
+\end{document}
