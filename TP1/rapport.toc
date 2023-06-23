@@ -1,15 +1,18 @@
 \babel@toc {french}{}\relax 
-\contentsline {section}{\numberline {1}Chiffrement}{2}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Permutation}{2}{subsection.1.1}%
-\contentsline {subsubsection}{\numberline {1.1.1}Question 1}{2}{subsubsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.2}Substitution}{2}{subsection.1.2}%
-\contentsline {subsubsection}{\numberline {1.2.1}Question 2}{2}{subsubsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.3}Diffie-Hellman}{2}{subsection.1.3}%
-\contentsline {subsubsection}{\numberline {1.3.1}Question 3}{2}{subsubsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.4}Chiffrement symétrique AES}{2}{subsection.1.4}%
-\contentsline {subsubsection}{\numberline {1.4.1}Question 5}{2}{subsubsection.1.4.1}%
-\contentsline {section}{\numberline {2}PKI}{3}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Création du Certificat Racine (ou CA) et de sa clé privée.}{3}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Lecture du certificat}{3}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Contenu du CSR}{3}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Création de la liste de révocation}{3}{subsection.2.4}%
+\contentsline {section}{\numberline {1}TP1 - Chiffrement et PKI}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Chiffrement}{2}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}Permutation}{2}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.2}Substitution}{2}{subsubsection.1.1.2}%
+\contentsline {subsubsection}{\numberline {1.1.3}Diffie-Hellman}{2}{subsubsection.1.1.3}%
+\contentsline {subsubsection}{\numberline {1.1.4}Chiffrement symétrique AES}{2}{subsubsection.1.1.4}%
+\contentsline {subsection}{\numberline {1.2}PKI}{3}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Création du Certificat Racine (ou CA) et de sa clé privée.}{3}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}Lecture du certificat}{3}{subsubsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.3}Contenu du CSR}{3}{subsubsection.1.2.3}%
+\contentsline {subsubsection}{\numberline {1.2.4}Création de la liste de révocation}{3}{subsubsection.1.2.4}%
+\contentsline {section}{\numberline {2}TP2 - TLS Authentification}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Openssl}{4}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Openssl et firefox}{4}{subsubsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.2}Vérification OCSP}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Vérification OCSP stapling}{5}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Apache}{5}{subsection.2.4}%
